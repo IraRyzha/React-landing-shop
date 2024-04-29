@@ -7,11 +7,11 @@ const NavDialog = ({ isMobileMenuOpen, onClose }) => {
     <Dialog
       open={isMobileMenuOpen}
       onClose={onClose}
-      className="absolute inset-y-0 w-screen h-screen bg-yellow-300"
+      className="absolute inset-y-0 w-screen h-screen z-50 "
     >
-      <Dialog.Panel className="absolute inset-y-0 w-screen h-screen bg-yellow-300">
-        <CloseButton onClick={onClose} className="absolute right-1" />
-        <NavMenu view="mobile" />
+      <Dialog.Panel className="inset-y-0 w-screen h-screen bg-white">
+        {/* <CloseButton onClick={onClose} className="absolute right-1" /> */}
+        <NavMenu view="modal" closeButton={<CloseButton onClick={onClose} />} />
       </Dialog.Panel>
     </Dialog>
   );

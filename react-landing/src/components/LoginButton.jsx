@@ -1,8 +1,15 @@
+import clsx from "clsx";
 import ArrowRight from "./icons/arrow-right";
 
-const LoginButton = () => {
+const LoginButton = ({ className }) => {
   return (
-    <a href="#" className="hidden lg:flex justify-center items-center gap-1">
+    <a
+      href="#"
+      className={clsx(
+        "font-semibold justify-center items-center gap-1",
+        className
+      )}
+    >
       <span>Log in</span>
       <ArrowRight />
     </a>
