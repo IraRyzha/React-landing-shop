@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import { navMenuItems } from "../constants";
+import SolutionsPanel from "./SolutionsPanel";
 
 const NavList = ({ view }) => {
   const navClassName = clsx(
@@ -25,6 +26,7 @@ const NavList = ({ view }) => {
           </a>
         );
       })}
+      <SolutionsPanel />
     </nav>
   );
 };

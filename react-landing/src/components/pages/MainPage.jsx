@@ -1,8 +1,12 @@
+import GradientBottom from "../GradientBottom";
+import GradientTop from "../GradientTop";
 import ArrowRight from "../icons/arrow-right";
+import UiButton from "../uikit/UiButton";
 
 const MainPage = () => {
   return (
-    <main className="w-screen h-screen flex justify-center items-center">
+    <main className="w-full h-screen flex justify-center items-center">
+      <GradientTop />
       <div className="w-1/2 px-10 mt-16 flex flex-col justify-center gap-6 items-center tracking-tight">
         <div className="border-2 mb-3 px-4 py-1 rounded-3xl flex justify-center sm:flex-row flex-col gap-1 items-center">
           <span className="text-sm font-normal text-center text-gray-600">
@@ -25,15 +29,14 @@ const MainPage = () => {
           aliquid aspernatur voluptatem fugiat cupiditate laudantium.
         </p>
         <div className="w-full mt-4 flex sm:flex-row flex-col justify-center gap-3 items-center">
-          <button className="px-5 py-2 flex justify-center items-center rounded-lg bg-main-violet text-white font-semibold hover:main-violet-hover ease-in-out">
-            Get started
-          </button>
-          <button className="px-5 py-2 flex justify-center items-center gap-1 rounded-lg bg-white hover:bg-gray-100 font-semibold ease-in-out">
-            <span>Learn more</span>
+          <UiButton color="violet">Get started</UiButton>
+          <UiButton color="white">
+            <span className="mr-1">Learn more</span>
             <ArrowRight />
-          </button>
+          </UiButton>
         </div>
       </div>
+      <GradientBottom />
     </main>
   );
 };

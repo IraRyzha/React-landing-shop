@@ -22,7 +22,7 @@ module.exports = {
       },
       colors: {
         "main-violet": "#4f46e5",
-        "main-violet-hover": "##5d55ea",
+        "main-violet-hover": "#5d55ea",
       },
     },
   },
