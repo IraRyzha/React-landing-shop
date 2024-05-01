@@ -26,7 +26,7 @@ const NavList = ({ view }) => {
           </a>
         );
       })}
-      <SolutionsPanel />
+      {view !== "modal" && <SolutionsPanel />}
     </nav>
   );
 };
