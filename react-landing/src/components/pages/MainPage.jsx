@@ -1,3 +1,4 @@
+import BanerSection from "../BanerSection";
 import GradientBottom from "../GradientBottom";
 import GradientTop from "../GradientTop";
 import ArrowRight from "../icons/arrow-right";
@@ -5,9 +6,9 @@ import UiButton from "../uikit/UiButton";
 
 const MainPage = () => {
   return (
-    <main className="w-full h-screen flex justify-center items-center">
+    <main className="w-full h-auto flex flex-col justify-center items-center gap-72">
       <GradientTop />
-      <div className="w-1/2 px-10 mt-16 flex flex-col justify-center gap-6 items-center tracking-tight">
+      <div className="w-1/2 px-10 mt-64 flex flex-col justify-center gap-6 items-center tracking-tight">
         <div className="border-2 mb-3 px-4 py-1 rounded-3xl flex justify-center sm:flex-row flex-col gap-1 items-center">
           <span className="text-sm font-normal text-center text-gray-600">
             Announcing our next round of funding.
@@ -37,6 +38,7 @@ const MainPage = () => {
         </div>
       </div>
       <GradientBottom />
+      <BanerSection />
     </main>
   );
 };

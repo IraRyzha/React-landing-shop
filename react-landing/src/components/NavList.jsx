@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { Link } from "react-router-dom";
 import { navMenuItems } from "../constants";
 import SolutionsPanel from "./SolutionsPanel";
 
@@ -21,9 +22,9 @@ const NavList = ({ view }) => {
     <nav className={navClassName}>
       {navMenuItems.map((item, index) => {
         return (
-          <a key={index} href={item.href} className={navItemClassName}>
+          <Link key={index} to={item.href} className={navItemClassName}>
             {item.name}
-          </a>
+          </Link>
         );
       })}
       {view !== "modal" && <SolutionsPanel />}

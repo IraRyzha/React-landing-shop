@@ -8,10 +8,10 @@ import {
 import { PhoneIcon, PlayCircleIcon } from "@heroicons/react/20/solid";
 
 const navMenuItems = [
-  { name: "Product", href: "#", description: "" },
-  { name: "Features", href: "#", description: "" },
-  { name: "Marketplace", href: "#", description: "" },
-  { name: "Company", href: "#", description: "" },
+  { name: "Product", href: "product", description: "" },
+  { name: "Features", href: "features", description: "" },
+  { name: "Marketplace", href: "marketplace", description: "" },
+  { name: "Company", href: "company", description: "" },
 ];
 
 const solutionPanelItems = [

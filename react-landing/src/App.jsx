@@ -1,12 +1,8 @@
-import Layout from "./components/common/Layout";
-import MainPage from "./components/pages/MainPage";
+import { RouterProvider } from "react-router";
+import { router } from "./router";
 
 function App() {
-  return (
-    <Layout>
-      <MainPage />
-    </Layout>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
