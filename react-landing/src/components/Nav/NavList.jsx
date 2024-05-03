@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { Link } from "react-router-dom";
-import { navMenuItems } from "../constants";
+import { navMenuItems } from "../../constants";
 import SolutionsPanel from "./SolutionsPanel";
 
 const NavList = ({ view }) => {

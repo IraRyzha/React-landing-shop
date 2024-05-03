@@ -1,7 +1,7 @@
 import { useState } from "react";
-import LoginButton from "./LoginButton";
-import Logo from "./Logo";
-import MenuButton from "./icons/menu-button";
+import LoginButton from "../LoginButton";
+import Logo from "../Logo";
+import MenuButton from "../icons/menu-button";
 import NavDialog from "./NavDialog";
 import NavList from "./NavList";
 

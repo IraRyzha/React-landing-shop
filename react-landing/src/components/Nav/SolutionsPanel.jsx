@@ -1,6 +1,6 @@
 import { Popover, Transition } from "@headlessui/react";
 import { Fragment } from "react";
-import { solutionPanelItems, solutionCallsToAction } from "../constants";
+import { solutionPanelItems, solutionCallsToAction } from "../../constants";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 const SolutionsPanel = () => {

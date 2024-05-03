@@ -1,5 +1,5 @@
 import { Dialog } from "@headlessui/react";
-import CloseButton from "./icons/close-button";
+import CloseButton from "../icons/close-button";
 import NavMenu from "./NavMenu";
 
 const NavDialog = ({ isMobileMenuOpen, onClose }) => {

@@ -1,14 +1,14 @@
 import BanerSection from "../BanerSection";
-import GradientBottom from "../GradientBottom";
-import GradientTop from "../GradientTop";
+import BoostSection from "../BoostSection";
 import ArrowRight from "../icons/arrow-right";
+import PricingSection from "../PriceSection";
+import ProductSection from "../ProductSection";
 import UiButton from "../uikit/UiButton";
 
 const MainPage = () => {
   return (
-    <main className="w-full h-auto flex flex-col justify-center items-center gap-72">
-      <GradientTop />
-      <div className="w-1/2 px-10 mt-64 flex flex-col justify-center gap-6 items-center tracking-tight">
+    <main className="w-full h-auto flex flex-col justify-center items-center gap-52">
+      <div className="w-1/2 px-10 mt-48 flex flex-col justify-center gap-6 items-center tracking-tight">
         <div className="border-2 mb-3 px-4 py-1 rounded-3xl flex justify-center sm:flex-row flex-col gap-1 items-center">
           <span className="text-sm font-normal text-center text-gray-600">
             Announcing our next round of funding.
@@ -37,8 +37,10 @@ const MainPage = () => {
           </UiButton>
         </div>
       </div>
-      <GradientBottom />
       <BanerSection />
+      <ProductSection />
+      <PricingSection />
+      <BoostSection />
     </main>
   );
 };
