@@ -1,6 +1,4 @@
 const getProducts = (url) => {
-  // fetch("...")
-
   return new Promise((resolve) => {
     const products = [
       {
