@@ -1,6 +1,42 @@
-import UiButton from "./uikit/UiButton";
+import { useContext } from "react";
+import { AppContext } from "../../context/MainContext";
+import { addToCart, removeFromCart } from "../../store/actions";
+import UiButton from "../uikit/UiButton";
+
+const RemoveButton = ({ onClick }) => (
+  <button
+    onClick={onClick}
+    type="button"
+    className="font-medium text-indigo-600 hover:text-indigo-500"
+  >
+    Remove
+  </button>
+);
+
+const ProductName = ({ href, name }) => (
+  <h3 className="text-base font-medium text-gray-900">
+    <a href={href}>{name}</a>
+  </h3>
+);
+
+const ProductPrice = ({ value }) => (
+  <p className="ml-4 text-base font-medium text-gray-900">{value}</p>
+);
+
+const ProductColor = ({ value }) => (
+  <p className="mt-1 text-sm text-gray-500">{value}</p>
+);
+
+const ProductPhoto = ({ src }) => (
+  <img
+    src={src}
+    alt={src}
+    className="h-full w-full object-cover object-center"
+  />
+);
+
 /**
- * @param {{s
+ * @param {{
  * type: string,
  * product: object,
  * onClick: any,
@@ -8,6 +44,7 @@ import UiButton from "./uikit/UiButton";
  */
 
 const ProductItem = ({ type, product, onClick }) => {
+  const { cart, dispatchCart } = useContext(AppContext);
   const baseProductItem = (
     <figure
       role="button"
@@ -33,8 +70,15 @@ const ProductItem = ({ type, product, onClick }) => {
     </figure>
   );
 
+  const isProductAlreadyOrdered = cart.products.find(
+    (item) => item.id === product.id
+  );
+
   const modalProductItem = (
-    <figure role="button" className="flex gap-5 w-full h-full">
+    <figure
+      role="button"
+      className="pointer-events-none flex gap-5 w-full h-full"
+    >
       <div className="flex-1 w-full h-full bg-gray-200">
         <img
           className="w-full h-full object-cover"
@@ -89,16 +133,48 @@ const ProductItem = ({ type, product, onClick }) => {
           <span className="font-bold">
             {product.price} {product.currency}
           </span>
-          <UiButton color="violet">Add to bag</UiButton>
+          <UiButton
+            onClick={() =>
+              isProductAlreadyOrdered
+                ? removeFromCart(dispatchCart, product)
+                : addToCart(dispatchCart, product)
+            }
+            color="violet"
+            className="pointer-events-auto"
+          >
+            {isProductAlreadyOrdered ? "Remove from bag" : "Add to bag"}
+          </UiButton>
         </div>
       </figcaption>
     </figure>
+  );
+
+  const cartProductItem = (
+    <div className="flex py-6">
+      <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+        <ProductPhoto src={product.photo} />
+      </div>
+
+      <div className="ml-4 flex flex-1 flex-col">
+        <div className="flex justify-between">
+          <ProductName href={product.href} name={product.name} />
+          <ProductPrice value={product.currency + product.price} />
+        </div>
+
+        <ProductColor value={product.options.color} />
+
+        <div className="flex flex-1 items-end">
+          <RemoveButton onClick={() => removeFromCart(dispatchCart, product)} />
+        </div>
+      </div>
+    </div>
   );
 
   return (
     <>
       {type === "base" && baseProductItem}
       {type === "modal" && modalProductItem}
+      {type === "cart" && cartProductItem}
     </>
   );
 };

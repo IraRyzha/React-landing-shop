@@ -1,6 +1,6 @@
-import GradientBottom from "./GradientBottom";
-import GradientTop from "./GradientTop";
-import ArrowRight from "./icons/arrow-right";
+import GradientBottom from "../GradientBottom";
+import GradientTop from "../GradientTop";
+import ArrowRight from "../icons/arrow-right";
 
 const banerLinkNames = [
   "Open roles",

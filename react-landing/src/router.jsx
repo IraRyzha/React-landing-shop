@@ -5,11 +5,11 @@ import ProductsPage from "./components/pages/ProductsPage";
 
 const router = createBrowserRouter([
   {
-    path: "",
+    path: "/",
     element: <Layout />,
     children: [
       {
-        path: "",
+        index: true,
         element: <MainPage />,
       },
       {

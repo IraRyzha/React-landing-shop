@@ -1,5 +1,5 @@
 import { CheckIcon } from "@heroicons/react/20/solid";
-import UiButton from "./uikit/UiButton";
+import UiButton from "../uikit/UiButton";
 
 const PricingSection = () => {
   return (

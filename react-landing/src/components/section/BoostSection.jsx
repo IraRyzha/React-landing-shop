@@ -1,5 +1,5 @@
-import ArrowRight from "./icons/arrow-right";
-import UiButton from "./uikit/UiButton";
+import ArrowRight from "../icons/arrow-right";
+import UiButton from "../uikit/UiButton";
 
 const BoostSection = () => {
   return (

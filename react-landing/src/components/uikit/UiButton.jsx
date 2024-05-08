@@ -6,7 +6,7 @@ import clsx from "clsx";
  * }} props
  */
 
-const UiButton = ({ children, color, className }) => {
+const UiButton = ({ children, color, className, onClick }) => {
   const buttonClassName = clsx(
     "font-semibold  px-5 py-2 flex justify-center items-center rounded-lg ease-in-out",
     className,
@@ -16,7 +16,11 @@ const UiButton = ({ children, color, className }) => {
       transparent: "bg-transparent hover:text-gray-300 text-white",
     }[color]
   );
-  return <button className={buttonClassName}>{children}</button>;
+  return (
+    <button className={buttonClassName} onClick={onClick}>
+      {children}
+    </button>
+  );
 };
 
 export default UiButton;

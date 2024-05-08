@@ -19,8 +19,8 @@ const SolutionsPanel = () => {
         leaveFrom="opacity-100 translate-y-0"
         leaveTo="opacity-0 translate-y-1"
       >
-        <Popover.Panel className="absolute bg-white left-1/2 -translate-x-1/2 top-8 max-w-max w-max h-max shadow-lg rounded-lg">
-          <div className="z-10 p-5 rounded-lg flex flex-col">
+        <Popover.Panel className="absolute z-20 bg-white left-1/2 -translate-x-1/2 top-8 max-w-max w-max h-max shadow-lg rounded-lg">
+          <div className="p-5 rounded-lg flex flex-col">
             {solutionPanelItems.map((item) => {
               return (
                 <div

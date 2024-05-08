@@ -1,8 +1,8 @@
-import BanerSection from "../BanerSection";
-import BoostSection from "../BoostSection";
+import BanerSection from "../section/BanerSection";
+import BoostSection from "../section/BoostSection";
 import ArrowRight from "../icons/arrow-right";
-import PricingSection from "../PriceSection";
-import ProductSection from "../ProductSection";
+import PricingSection from "../section/PriceSection";
+import ProductSection from "../section/ProductSection";
 import UiButton from "../uikit/UiButton";
 
 const MainPage = () => {
